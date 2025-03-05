@@ -1,0 +1,35 @@
+:root {
+    --btn: #0d6efd;
+    --btn-hover: #5f9cf8; 
+    --btn-active: #095fe2;
+  
+    --white-fonts: #fff;
+    --red-fonts: rgb(201, 28, 28);  
+    --black-fonts: rgb(1, 1, 1);
+    --gray-fonts: rgb(109, 105, 105);
+    --orange:#e75d3a;  
+  
+    /* books */
+    /* --books-background: rgb(219, 221, 222); */
+    --books-background: #f1deac;
+  
+    --order-conteiner: rgb(231, 225, 225);
+    --extension-conteiner: #cbcdd9;
+  
+    /* --order-conteiner: rgb(247, 247, 214); */
+    --order-block: rgb(192, 202, 215);
+    --order-input-outline: rgb(134, 164, 199);
+    --order-input-bacground: rgb(231, 236, 242);
+  
+    /* --extension-conteiner: rgb(247, 247, 214);  */
+    --extension-block: #efe2e2;
+    --extension-input-outline: rgb(219, 221, 222);
+    --extension-input-bacground: rgb(230, 234, 241);
+  
+    /* electronic */
+    --electronic-background: #f1deac;
+    --electronic-conteiner:rgb(247, 247, 214);
+    --electronic-input-outline: rgb(165, 170, 175);
+    --electronic-input-bacground: rgb(231, 236, 242);
+  }
+  

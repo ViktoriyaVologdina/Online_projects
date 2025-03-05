@@ -1,0 +1,215 @@
+/* main */
+@import "normalize.css";
+@import "fonts.css";
+@import "variables.css";
+
+/* other */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    min-width: 320px;
+    font-family: "OpenSans";
+    background-color: var(--electronic-background);
+}
+
+img {
+    max-width: 100%;
+}
+
+/* main */
+.flex {
+    display: flex;
+}
+
+.none {
+    display: none;
+}
+
+.conteiner {
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 0 30px;
+    max-width: 800px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px var(--gray-fonts);
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+.explanation {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    color: var(--red-fonts);
+}
+
+.star {
+    margin: 0;
+    padding: 0;
+    color: var(--red-fonts);
+    font-weight: 700;
+}
+
+/* main */
+.electronic-conteiner {
+    background-color: var(--electronic-conteiner);
+}
+
+.electronic-title {
+    font-size: 30px;
+}
+
+/* content */
+.electronic__content {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.electronic__content-left {
+    flex-direction: column;
+}
+
+.electronic__content-left-box {
+    align-items: center;    
+    margin-bottom: 5px;
+}
+
+.electronic__content-left-img {
+    margin-right: 10px;
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 30px solid var(--orange);
+    border-bottom: 10px solid transparent;
+}
+
+.electronic__content-left-text {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--orange);
+}
+
+.electronic__content-right {
+    width: 150px;
+}
+
+/* form */
+.electronic__form-block {
+    padding-bottom: 25px; 
+}
+
+.electronic__form-title {
+    margin-left: 10px;
+    margin-bottom: 6px;
+    color: var(--black-fonts);
+}
+
+.electronic__form-radio-box {
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.electronic__form-radio-box:not(:last-child) {
+    margin-bottom: 7px;
+}
+
+.electronic__form-box-input {
+    margin-right: 5px;    
+    cursor: pointer;
+}
+
+.electronic__form-input {
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: outline .3s ease-in-out, background-color .2s ease-in-out;
+}
+
+.electronic__form-input:focus {
+    outline: 2px solid var(--electronic-input-outline);
+    background-color: var(--electronic-input-bacground);
+    transition: outline .3s ease-in-out, background-color .2s ease-in-out;
+}
+
+.electronic__form-input:hover {
+    outline: 2px solid var(--electronic-input-outline);
+    transition: outline .3s ease-in-out;
+}
+
+.electronic__form-input:active {
+    outline: 2px solid var(--electronic-input-outline);
+    background-color: var(--electronic-input-bacground);
+    transition: outline .3s ease-in-out, background-color .2s ease-in-out;
+}
+
+.electronic__birthday {
+    width: auto;
+}
+
+/* btn */
+.electronic__btn {
+    display: flex;
+    justify-content: center;
+}
+
+.electronic__btn-submit {
+    margin-bottom: 20px;
+    padding: 15px 40px;
+    border-radius: 4px;
+    background-color: var(--btn);
+    color: var(--white-fonts);
+    cursor: pointer;
+    transition: background-color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+.electronic__btn-submit:focus {
+    background-color: var(--btn-hover);
+    outline: 1px solid var(--btn);
+    outline-offset: 2px;
+    transition: background-color .3s ease-in-out, outline .3s ease-in-out;
+}
+
+.electronic__btn-submit:hover {
+    background-color: var(--btn-hover);
+    transition: background-color .3s ease-in-out;
+}
+
+.electronic__btn-submit:active {
+    background-color: var(--btn-active);
+    transition: background-color .3s ease-in-out;
+}
+
+/* валидация - ошибка */
+.just-validate-error-label {
+    /* margin-left: 10px; */
+    margin-top: 5px;
+    color: rgb(34, 10, 57);
+    font-size: 15px;
+}
+
+/* сообщение об отправке */
+.success-message {
+    margin-left: 20px;
+    color: #12ab17;
+    font-size: 16px;
+    text-align: center;
+}

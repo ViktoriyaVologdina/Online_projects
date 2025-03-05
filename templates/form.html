@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Форма для подачи заявки на подключение к онлайн-проектам">
+
+    <title>Заявка на подключение к онлайн-проектам</title>
+
+    <link rel="stylesheet" href="/static/css/form.css">
+
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/form.css') }}">
+    <script defer src="{{ url_for('static', filename='libs/inputmask.min.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='libs/just-validate.min.js') }}"></script>
+    <script defer src="{{ url_for('static', filename='form.js') }}"></script>
+
+
+    <script defer src="../static/libs/inputmask.min.js"></script>
+    <script defer src="../static/libs/just-validate.min.js"></script>
+
+    <script defer src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script defer src="https://rawgit.com/RobinHerbots/Inputmask/5.x/dist/jquery.inputmask.js"></script>
+
+    <script defer src="../static/form.js"></script>
+
+</head>
+
+<body>
+    <main class="electronic">
+        <div class="conteiner electronic-conteiner">
+            <h1 class="title electronic-title">Заявка на подключение к онлайн-проектам:</h1>
+
+            <div class="electronic__content flex">
+                <div class="electronic__content-left flex">
+                    <div class="electronic__content-left-box flex">
+                        <div class="electronic__content-left-img"></div>
+                        <p class="electronic__content-left-text">Библиотека ЛитРес</p>
+                    </div>
+
+                    <div class="electronic__content-left-box flex">
+                        <div class="electronic__content-left-img"></div>
+                        <p class="electronic__content-left-text">Университетская библиотека ONLINE</p>
+                    </div>
+
+                    <div class="electronic__content-left-box flex">
+                        <div class="electronic__content-left-img"></div>
+                        <p class="electronic__content-left-text">ART-PORTAL: мировая художественная культура</p>
+                    </div>
+
+                </div>
+
+                <div class="electronic__content-right">
+                    <img class="electronic__content-right-img" src="/static/img/logo.png" alt="Логотип ЦБС Курортного района">
+                </div>
+            </div>
+
+            <form class="form electronic__form" id="form" action="/submit" method="POST">
+                <p class="explanation">
+                    <span class="star">*</span>
+                    обязательный вопрос
+                </p>
+                <div class="electronic__form-block">
+                    <p class="electronic__form-title">У Вас есть Единый читательский билет? <span class="star">*</span>
+                    </p>
+                    <div class="electronic__form-radio-box">
+                        <input class="electronic__form-box-input" type="radio" name="ticket" value="ticket-yes"
+                            id="ticket-yes" checked>
+                        <label for="ticket-yes">Да</label>
+                    </div>
+
+                    <div class="electronic__form-radio-box">
+                        <input class="electronic__form-box-input" type="radio" name="ticket" value="ticket-not"
+                            id="ticket-not">
+                        <label for="ticket-not">Нет</label>
+                    </div>
+                </div>
+
+                <div class="electronic__form-block" id="number-ticket">
+                    <p class="electronic__form-title">Номер читательского билета <span class="star">*</span></p>
+                    <input class="electronic__form-input" id="ticket-number" type="text"
+                        placeholder="Введите свой номер читательского билета" autocomplete="off">
+                </div>
+
+                <div class="electronic__form-block">
+                    <p class="electronic__form-title">Фамилия Имя Отчество <span class="star">*</span></p>
+                    <input class="electronic__form-input" id="electronic-fio" type="text"
+                        placeholder="Введите свою фамилию, имя и отчества" pattern="[А-Яа-яЁё\s]+" required>
+                </div>
+
+                <div class="electronic__form-block" id="birth-block">
+                    <p class="electronic__form-title">Дата рождения<span class="star">*</span></p>
+                    <input class="electronic__form-input electronic__birth" type="date" name="birth" id="electronic-birth">
+                </div>
+
+                <div class="electronic__form-block">
+                    <p class="electronic__form-title tel">Контактный телефон
+                        <span class="star">*</span>
+                    </p>
+                    <input class="electronic__form-input" id="electronic-phone" type="tel"
+                        placeholder="Введите свой номер телефона">
+                </div>
+
+                <div class="electronic__form-block">
+                    <p class="electronic__form-title">Адрес электронной почты (для ответного письма)
+                        <span class="star">*</span>
+                    </p>
+                    <input class="electronic__form-input" id="electronic-email" type="text"
+                        placeholder="Введите свой адрес электронной почты">
+                </div>
+
+                <div class="electronic__form-block">
+                    <p class="electronic__form-title">Согласие на обработку персональных данных
+                        <span class="star">*</span>
+                    </p>
+                    <div class="electronic__form-radio-box" id="radio-data">
+                        <label for="data">
+                            <input class="electronic__form-box-input" id="data" type="radio" name="data">
+                            согласен(а)</label>
+                    </div>
+                </div>
+
+                <div class="electronic__btn">
+                    <button class="electronic__btn-submit" type="submit" id="sendBook">Отправить</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </main>
+</body>
+
+</html>

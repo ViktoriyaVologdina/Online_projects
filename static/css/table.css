@@ -1,0 +1,244 @@
+/* main */
+@import "normalize.css";
+@import "fonts.css";
+/* @import "variables.css"; */
+
+/* other */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 10px;
+    min-width: 320px;
+    font-family: "OpenSans";
+    font-size: 14px;
+    background: #f9ff0024;
+}
+
+img {
+    max-width: 100%;
+}
+
+.conteiner {
+    margin: auto;
+    margin-bottom: 50px;
+    padding: 0 30px;
+    max-width: 1920px;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+}
+
+
+/* title */
+.books-title {
+    margin-bottom: 15px;
+    justify-content: space-between;
+    color: #5b5d60;
+}
+
+.books-title__right {
+    position: relative;
+    align-items: center;
+}
+
+.books-title__text {
+    margin-right: 5px;
+}
+
+.books-title__input {
+    padding: 5px;
+    width: 250px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+
+/* table */
+.books-wraper {
+    overflow-x: auto;
+}
+
+.books__table {
+    margin-bottom: 20px;
+    width: 100%;
+    min-width: 700px;
+    table-layout: auto;
+    height: auto;    
+    border: 1px solid #eee;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-radius: 15px;
+}
+
+.books__table th {
+    font-weight: bold;
+    padding: 5px;
+    background: #f9ff00cf;
+    border: 1px solid #dddddd;
+    text-align: start;
+    transition: all 0.3s ease;
+}
+
+.books__table th:hover {
+    background: #f2f200; 
+    color: #000; 
+}
+
+.books__table th:active {
+    background: #e0e000; 
+    color: #333; 
+}
+
+.books__table th:focus {
+    background: #d2d200; 
+    outline: 2px solid #ff4500; 
+}
+
+.books__table td {
+    padding: 6px 10px;
+    border: 1px solid #eee;
+    text-align: left;
+}
+
+/* Чередование цветов строк */
+.books__table tbody tr:nth-child(odd) {
+    background: #fbff0063; /* Светло-желтый */
+    transition: background 0.3s ease-in-out;
+}
+
+.books__table tbody tr:nth-child(even) {
+    background: #f9ff0024; /* Ещё светлее */
+    transition: background 0.3s ease-in-out;
+}
+
+/* Подсветка строки при наведении */
+.books__table tbody tr:hover {
+    background: #ffeb3b; /* Яркий желтый */
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+/* Эффект при нажатии на строку */
+.books__table tbody tr:active {
+    background: #fdd835; /* Золотистый оттенок */
+    transition: background 0.1s ease-in-out;
+}
+
+/* Фокус на строку (например, при навигации с клавиатуры) */
+.books__table tbody tr:focus-within {
+    outline: 2px solid #ffca28; /* Оранжевая обводка */
+    background: #fff176; /* Яркий жёлтый */
+    transition: background 0.2s ease-in-out;
+}
+
+.books__table-number {
+    position: relative;
+    width: 3%;
+    cursor: pointer;
+}
+
+.books__table-date {
+    position: relative;
+    width: 7%;
+    background-position: right bottom 3px;
+    cursor: pointer;
+}
+
+.books__table-fio {
+    width: 300px;
+    position: relative;
+    cursor: pointer;
+}
+
+.books__table-birth {
+    cursor: pointer;
+}
+
+.books__table-ticket {
+    cursor: pointer;
+}
+
+.books__table-phone {
+    cursor: pointer;
+}
+
+.books__table-email {
+    cursor: pointer;
+}
+
+.books__table-messager {
+    width: 15%;
+    cursor: pointer;
+}
+
+.sort-up__img,
+.sort-down__img {
+    position: absolute;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.sort-up__img {
+    background-image: url(../img/sort-up.png);
+}
+
+.sort-down__img {
+    background-image: url(../img/sort-down.png);
+}
+
+.number-sort {
+    right: 2px;
+    top: 0;
+    width: 7px;
+    height: 100%;
+}
+
+.date-sort {
+    right: 5px;
+    top: 1px;
+    width: 7px;
+    height: 100%;
+}
+
+.fio-sort {
+    right: 6px;
+    top: 1px;
+    width: 7px;
+    height: 100%;
+}
+
+/* search-list */
+
+/* .find-list {
+    position: absolute;
+    top: 33px;
+    left:48px;    
+    margin: 0;
+    padding: 0;
+    padding: 10px;
+    width: 100%;
+    max-width: 246px;
+    list-style-type: none;
+    z-index: 5;
+    background-color: #fff6f6;
+    box-shadow: 0px 0px 35px rgba(0, 0, 0, 0.15);
+}
+
+.find-list__item:not(:list-child) {
+    margin-bottom: 5px;
+    border-bottom: 1px solid #b2b1b1;
+}
+
+.hide {
+    display: none;
+} */

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заявка на подключение к онлайн-проектам</title>
+
+    <link href="{{ url_for('static', filename='css/table.css') }}" rel="stylesheet">
+    <script defer src="{{ url_for('static', filename='table.js') }}"></script>
+
+    <link href="../static/css/table.css" rel="stylesheet">
+    <script defer src="../static/table.js"></script>
+
+</head>
+
+<body>
+    <main class="electronic">
+
+        <div class="conteiner">
+            <div class="books-title flex">
+                <div class="books-title__left">
+                    <h1 class="books-title__heading">Заявка на подключение к онлайн-проектам</h1>
+                </div>
+                <div class="books-title__right flex">
+                    <p class="books-title__text">Поиск</p>
+                    <input class="books-title__input" type="text" id="search" placeholder="Поиск по заявкам">
+                    <ul class="books-title__find find-list hide"></ul>
+                </div>
+            </div>
+
+            <div class="books-wraper">
+                <table class="books__table" id="books-table">
+                    <thead class="books__table-thead">
+                        <tr class="books__table-tr tr-head">
+                            <th class="books__table-number" id="number" data-type="number">№
+                                <span class="number-sort"></span>
+                            </th>
+                            <th class="books__table-date" id="date" data-type="date">Дата заявки
+                                <span class="date-sort"></span>
+                            </th>
+                            <th class="books__table-fio" id="fio" data-type="fio">ФИО
+                                <span class="fio-sort"></span>
+                            </th>
+                            <th class="books__table-birth" id="birth">Дата рождения</th>
+                            <th class="books__table-ticket" id="ticket">Читательский билет</th>
+                            <th class="books__table-phone" id="phone">Контактный телефон</th>
+                            <th class="books__table-email" id="email">Электронная почта</th>
+                            <th class="books__table-messager" id="messager">Согласие на обработку персональных данных
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="books__table-tbody" id="tbody">
+                        <!-- Данные будут добавляться сюда через JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+</body>
+
+</html>
